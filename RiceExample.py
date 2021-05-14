@@ -33,8 +33,8 @@ def test_model(X, Y, model, threshold=0.5):
     return tp, tn, fp, fn
 
 
-traindata = pd.read_csv('ricetrain.csv', sep=',')
-testdata = pd.read_csv('ricetest.csv', sep=',')
+traindata = pd.read_csv('data/Ricetrain.csv', sep=',')
+testdata = pd.read_csv('data/Ricetest.csv', sep=',')
 xtrain, ytrain = preprocess(traindata)
 xtest, ytest = preprocess(testdata)
 model = MultiLayerPerceptron([PerceptronLayer(15, 7, ReLU, init=xavier_init),
